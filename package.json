@@ -11,8 +11,7 @@
     "gifajster-driver": "dist/src/index.js"
   },
   "files": [
-    "dist/src/**/*js",
-    "dist/src/**/*json",
+    "dist/",
     "package.json"
   ],
   "keywords": [],
