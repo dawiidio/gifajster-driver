@@ -12,6 +12,7 @@
   },
   "files": [
     "dist/src/**/*js",
+    "dist/src/**/*json",
     "package.json"
   ],
   "keywords": [],
