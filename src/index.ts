@@ -1,18 +1,22 @@
 #!/usr/bin/env node
 
 import * as process from 'process';
-import * as pkg from '../package.json';
 import { PlayerBuilder } from './Player/PlayerBuilder';
 import { GifajsterDriver, GifajsterEvents } from './Gifajster/GifajsterDriver';
 import { Command } from 'commander';
 import { Config, ConfigObject, ConfigRegistry } from './Config';
+import { getPackageInfo } from './Common';
 
 function init() {
     const program = new Command();
+    const {
+        name,
+        version
+    } = getPackageInfo();
 
     program
-        .name(pkg.name)
-        .version(pkg.version)
+        .name(name)
+        .version(version)
         .description('Driver for gifajster mini media keyboard which provides ability to song scrolling by physical knob')
         .option('-v, --version', 'output the version number')
         .option('-s, --step <number>', 'encoder step size in milliseconds', '8')

@@ -1,21 +1,30 @@
 {
   "name": "gifajster-driver",
   "version": "0.0.3",
-  "description": "",
-  "main": "dist/src/index.js",
+  "description": "Driver for media keyboard Gifajster",
+  "main": "dist/index.js",
+  "repository": {
+    "url": "https://github.com/dawiidio/gifajster-driver"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
   "bin": {
-    "gifajster-driver": "dist/src/index.js"
+    "gifajster-driver": "dist/index.js"
   },
   "files": [
     "dist/",
     "package.json"
   ],
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "keyboard",
+    "driver",
+    "hardware",
+    "qmk",
+    "gifajster"
+  ],
+  "author": "Dawid Wojda <dawiidio@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "commander": "^8.3.0",
