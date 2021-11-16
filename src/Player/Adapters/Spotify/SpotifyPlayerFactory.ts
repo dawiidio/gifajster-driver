@@ -1,9 +1,9 @@
 import { MacOsSpotifyDriver } from './Adapters/MacOsSpotifyDriver';
-import { Config } from '../../../Config';
+import { ConfigRegistry } from '../../../Config';
 import { PlayerAdapter } from '../../PlayerAdapter';
 
 export class SpotifyPlayerFactory {
-    public static getPlayer(platform: NodeJS.Platform = Config.getPlatform()): PlayerAdapter {
+    public static getPlayer(platform: NodeJS.Platform = ConfigRegistry.getConfig().getPlatform()): PlayerAdapter {
         switch (platform) {
             case 'darwin':
                 return new MacOsSpotifyDriver();

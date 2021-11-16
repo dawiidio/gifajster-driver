@@ -1,20 +1,24 @@
 {
-  "name": "gifajster-media-keyboard-driver",
+  "name": "gifajster-driver",
   "version": "0.0.1",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
+  "bin": {
+    "gifajster-driver": "dist/src/index.js"
+  },
   "files": [
-    "dist/**/*js",
+    "dist/src/**/*js",
     "package.json"
   ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "commander": "^8.3.0",
     "node-global-key-listener": "0.0.13",
     "ts": "^0.2.2",
     "tsc": "^2.0.3"
